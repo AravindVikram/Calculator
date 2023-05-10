@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+   <script>
+    function calc() {
+            var Display_1 = parseInt(document.getElementById('Display_1').value)
+            var Display_2 = parseInt(document.getElementById('Display_2').value)
+            var oper = document.getElementById('operators').value;
+          
+                 if(oper === '+'){
+
+                    document.getElementById('Result').value = Display_1+Display_2 ;
+
+                 }
+
+                 if(oper === '-'){
+
+                    document.getElementById('Result').value = Display_1-Display_2 ;
+
+                 }
+                 if(oper === '/'){
+
+                     document.getElementById('Result').value = Display_1/Display_2 ;
+
+                 }
+
+                 if(oper === 'x'){
+
+                     document.getElementById('Result').value = Display_1*Display_2 ;
+
+                 }
+    
+    
+                }     
+
+        
+   </script>  
+
+</head>
+<body style="background-color: rgba(134, 131, 127, 0.925);" >
+    <h1>Calculator</h1><Br></Br>
+    <p>Enter two digit values</p>
+    <input type="text" id="Display_1"><br>
+    <input type="text" id="Display_2"><br><br>
+     
+    
+    <p>Choose an operator</p>
+    <select  id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="x">x</option>
+    </select><br><br>
+
+    <button onclick="calc()">=</button>
+    <input type="text" id="Result">
+    <p>Result!</p>
+    
+
+    
+</body>
+</html>
